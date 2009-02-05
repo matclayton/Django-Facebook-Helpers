@@ -1,4 +1,5 @@
 from django import template
+from django.conf import settings
 
 register = template.Library()
 
@@ -33,8 +34,8 @@ def version_url(url_string, version = None):
   """
  # parts = url_string.rpartition('/')
   
-  if version:
-    url_string = url_string +'?v=' + str(version) 
+  #if version:
+  #  url_string = url_string +'?v=' + str(version) 
   return settings.MEDIA_URL + url_string
 
 @register.simple_tag
