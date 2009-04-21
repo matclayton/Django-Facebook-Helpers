@@ -1,6 +1,8 @@
 import facebook.djangofb as facebook
 #from fb_utils.reverse import fbReverse
 from django.conf import settings
+#Attach to Specified User Model
+from django.core.exceptions import ImproperlyConfigured
 
 if not getattr(settings, 'FACEBOOK_USER_MODEL', False):
     raise NoFacebookUserModelinSettings
