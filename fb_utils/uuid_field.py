@@ -14,8 +14,8 @@ class UUIDField(CharField):
     """
 
     def __init__(self, verbose_name=None, name=None, auto=True, version=1, node=None, clock_seq=None, namespace=None, **kwargs):
-        kwargs['max_length'] = 36
         self.auto = auto
+        kwargs['max_length'] = 36
         if auto:
             kwargs['blank'] = True
             kwargs['editable'] = kwargs.get('editable', False)
